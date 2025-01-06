@@ -45,7 +45,7 @@ class _EditChannelPageState extends State<EditChannelPage> {
 
       try {
         final response = await http.put(
-          Uri.parse("http://10.0.2.2:8000/channels/${widget.channel['_id']}/edit"),
+          Uri.parse("http://10.0.2.2:8000/mychannels/${widget.channel['_id']}/edit"),
           headers: {'Content-Type': 'application/json'},
           body: json.encode({
             'channel_name': _nameController.text,

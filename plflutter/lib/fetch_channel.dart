@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ChannelService {
-  static const String apiUrl = "http://10.0.2.2:8000/channels/";
+  static const String apiUrl = "http://10.0.2.2:8000/mychannels/";
 
   // Function to fetch the channel data
   Future<List<Map<String, dynamic>>> fetchChannels() async {

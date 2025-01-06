@@ -75,7 +75,7 @@ class AddSensorScreen extends StatelessWidget {
       return;
     }
 
-    final url = Uri.parse('http://127.0.0.1:8000/mychannel/$channelId/add_sensor'); 
+    final url = Uri.parse('http://10.0.2.2:8000/$channelId/add_sensor'); 
     final response = await http.post(
       url,
       body: {'apiKey': apiKey},

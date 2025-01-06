@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class SensorService {
-  final String baseUrl = 'http://127.0.0.1:8000'; 
+  final String baseUrl = 'http://10.0.2.2:8000'; 
 
   // Fetch sensors for a specific channel
   Future<Map<String, dynamic>> fetchSensors(String channelId) async {
-    final url = Uri.parse('$baseUrl/mychannel/$channelId/manage_sensor');
+    final url = Uri.parse('$baseUrl/$channelId/manage_sensor');
 
     try {
       final response = await http.get(url);

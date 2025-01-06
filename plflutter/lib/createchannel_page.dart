@@ -48,7 +48,7 @@ class _ChannelFormState extends State<ChannelForm> {
       _isSubmitting = true; // Disable the button
     });
 
-    const String apiUrl = "http://10.0.2.2:8000/channels/create/";
+    const String apiUrl = "http://10.0.2.2:8000/mychannels/create/";
 
     try {
       final response = await http.post(

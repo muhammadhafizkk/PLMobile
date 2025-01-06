@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 
 Future<List<SensorData>> fetchSensorData() async {
-  final response = await http.get(Uri.parse('http://127.0.0.1:8000/mychannel/672484a397fae572346fda56/get_dashboard_data/'));
+  final response = await http.get(Uri.parse('http://10.0.2.2:8000/672484a397fae572346fda56/get_dashboard_data/'));
 
   if (response.statusCode == 200) {
     // Parse the response as a Map
