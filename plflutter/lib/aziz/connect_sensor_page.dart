@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'dashboard_page.dart';
+import 'package:plflutter/aziz/dashboard_page.dart';
 
 class AddSensorScreen extends StatelessWidget {
   final String channelId;
@@ -75,7 +75,7 @@ class AddSensorScreen extends StatelessWidget {
       return;
     }
 
-    final url = Uri.parse('http://10.0.2.2:8000/$channelId/add_sensor'); 
+    final url = Uri.parse('http://10.0.2.2:8000/mychannel/$channelId/add_sensor'); 
     final response = await http.post(
       url,
       body: {'apiKey': apiKey},

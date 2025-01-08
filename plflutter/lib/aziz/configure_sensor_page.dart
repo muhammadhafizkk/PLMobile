@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'manage_sensor_page.dart';
-import 'sensor_service.dart';
-import 'dashboard_page.dart';
+import 'package:plflutter/aziz/sensor_service.dart';
+import 'package:plflutter/aziz/dashboard_page.dart';
 
 class ConfigureSensorPage extends StatefulWidget {
   final String channelId;

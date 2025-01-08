@@ -24,7 +24,7 @@ class _DeleteChannelDialogState extends State<DeleteChannelDialog> {
       _isLoading = true;
     });
 
-    const String apiUrl = "http://10.0.2.2:8000/mychannels/delete/"; // URL for delete API
+    const String apiUrl = "http://10.0.2.2:8000/mychannel/delete/"; // URL for delete API
     try {
       final response = await http.delete(Uri.parse('$apiUrl$channelId'));
       if (response.statusCode == 200) {

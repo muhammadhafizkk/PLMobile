@@ -6,7 +6,7 @@ class SensorService {
 
   // Fetch sensors for a specific channel
   Future<Map<String, dynamic>> fetchSensors(String channelId) async {
-    final url = Uri.parse('$baseUrl/$channelId/manage_sensor');
+    final url = Uri.parse('$baseUrl/mychannel/$channelId/manage_sensor');
 
     try {
       final response = await http.get(url);

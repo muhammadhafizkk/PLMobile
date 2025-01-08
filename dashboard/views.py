@@ -1173,3 +1173,31 @@ def permit_API(request, channel_id):
             return JsonResponse({'error': 'Failed to update API access'}, status=500)
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+# To make channel to public and send API to Plantfeed - DONE
+# @csrf_exempt
+# def share_channel(request, channel_id):
+#     _id = ObjectId(channel_id)
+#     db, collection = connect_to_mongodb('Channel', 'dashboard')
+    
+#     if db is not None and collection is not None:
+#         channel = collection.find_one({"_id": _id})
+#         if channel:
+#             plantfeed_link = PLANTFEED_SHARING_API_PATH
+#             channel_data = {
+#                 "channel_id": str(_id),
+#                 "userid": 1,
+#                 "embed_link": f"https://shiroooo.pythonanywhere.com/mychannel/embed/channel/{channel_id}/",
+#                 "channel_name": channel.get("channel_name", "")
+#             }
+#             response = requests.post(plantfeed_link, json=channel_data)
+#             if response.status_code == 200:
+#                 return JsonResponse({"success": " successfully sent to Plantfeed"}, status=200)
+#             else:
+#                 print(f"Failed to send data to PlantFeed: {response.text}")
+#                 return JsonResponse({"error": "Failed to share channel to PlantFeed"}, status=500)
+#         else:
+#             return JsonResponse({"success": False, "error": "Document not found"}, status=404)
+#     else:
+#         print("Error connecting to MongoDB.")
+#         return JsonResponse({"error": "Failed to connect to the database. Please try again later."}, status=500)

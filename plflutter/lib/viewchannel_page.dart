@@ -48,7 +48,7 @@ class _BasePageState extends State<BasePage> {
   }
 
   Future<void> fetchChannelStatistics() async {
-    const String apiUrl = "http://10.0.2.2:8000/mychannels/stats/";
+    const String apiUrl = "http://10.0.2.2:8000/mychannel/stats/";
     try {
       final response = await http.get(Uri.parse(apiUrl));
       if (response.statusCode == 200) {
